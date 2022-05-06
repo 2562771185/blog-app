@@ -11,7 +11,7 @@
         </router-link>
       </el-col>
 
-      <el-col v-if="!simple" :span="16" :offset="3">
+      <el-col v-if="!simple" :span="14" :offset="3">
         <el-menu :router=true menu-trigger="click" active-text-color="#467b47" :default-active="activeIndex"
                  mode="horizontal" background-color="#bdb494" text-color="black" >
           <el-menu-item index="/" style="font-size: larger"> 首页</el-menu-item>
@@ -47,9 +47,8 @@
         <slot></slot>
       </template>
 
-      <el-col :span="2" >
+      <el-col :span="4" >
         <el-menu :router=true menu-trigger="click" mode="horizontal" background-color="#bdb494">
-
           <template v-if="!user.login">
             <el-menu-item index="/login">
               <el-button type="info">登录</el-button>

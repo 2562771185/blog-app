@@ -7,7 +7,7 @@
       <div class="me-view-info">
         <span class="me-view-nickname">{{comment.author.nickname}}</span>
         <div class="me-view-meta">
-          <span>{{rootCommentCounts - index}}楼</span>
+          <span style="color: #00d1b2">{{rootCommentCounts - index}}楼</span>
           <span>{{comment.createDate | format}}</span>
         </div>
       </div>
@@ -19,7 +19,7 @@
         <!--<i class="el-icon-caret-top"></i> 20-->
         <!--</a>-->
         <a class="me-view-comment-tool" @click="showComment(-1,comment.author)">
-          <i class="me-icon-comment"></i>&nbsp; 评论
+          <i class="me-icon-comment"></i>&nbsp; <span style="color:#edf109;">评论</span>
         </a>
       </div>
 

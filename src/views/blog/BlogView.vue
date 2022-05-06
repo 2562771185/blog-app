@@ -1,5 +1,5 @@
 <template>
-  <div class="me-view-body" v-title :data-title="title">
+  <div class="me-view-body" v-title :data-title="title" style="background-color: #8c939d;">
     <el-container class="me-view-container">
       <!--<el-aside class="me-area">-->
         <!--<ul class="me-operation-list">-->
@@ -12,13 +12,13 @@
 
         <div class="me-view-card">
           <h1 class="me-view-title">{{article.title}}</h1>
-          <div class="me-view-author">
+          <div class="me-view-author" style="margin-bottom: 15px">
             <a class="">
               <img class="me-view-picture" :src="article.author.avatar"></img>
             </a>
-            <div class="me-view-info">
+            <div class="me-view-info" style="color: black">
               <span>{{article.author.nickname}}</span>
-              <div class="me-view-meta">
+              <div class="me-view-meta" style="color: #000107">
                 <span>{{article.createDate | format}}</span>
                 <span>阅读   {{article.viewCounts}}</span>
                 <span>评论   {{article.commentCounts}}</span>
@@ -82,7 +82,7 @@
 
               <el-row :gutter="20">
                 <el-col :span="2" :offset="22">
-                  <el-button type="text" @click="publishComment()">评论</el-button>
+                  <el-button type="text" @click="publishComment()" style="color: black">评论</el-button>
                 </el-col>
               </el-row>
             </div>
@@ -98,7 +98,8 @@
               :index="index"
               :rootCommentCounts="comments.length"
               @commentCountsIncrement="commentCountsIncrement"
-              :key="c.id">
+              :key="c.id"
+            style="background-color: #7b6e6e;opacity: 0.7;">
             </commment-item>
 
           </div>
@@ -234,11 +235,11 @@
     },
     //组件内的守卫 调整body的背景色
     beforeRouteEnter(to, from, next) {
-      window.document.body.style.backgroundColor = '#fff';
+      window.document.body.style.backgroundColor = '#dd2222';
       next();
     },
     beforeRouteLeave(to, from, next) {
-      window.document.body.style.backgroundColor = '#f5f5f5';
+      window.document.body.style.backgroundColor = '#ac1b1b';
       next();
     }
   }

@@ -105,7 +105,7 @@
     },
     //组件内的守卫 调整body的背景色
     beforeRouteEnter(to, from, next) {
-      window.document.body.style.backgroundColor = '#fff';
+      window.document.body.style.backgroundColor = '#bbbdbb';
       next();
     },
     beforeRouteLeave(to, from, next) {
@@ -117,7 +117,7 @@
 
 <style>
   .me-allct-body {
-    margin: 60px auto 140px;
+    margin: 80px auto 280px;
   }
 
   .me-allct-container {
@@ -139,7 +139,7 @@
   .me-allct-content {
     display: inline-block;
     width: 100%;
-    background-color: #fff;
+    background-color: rgba(189, 180, 148, 0.75);
     border: 1px solid #f1f1f1;
     transition: border-color .3s;
     text-align: center;
@@ -175,6 +175,6 @@
 
   .me-allct-meta {
     font-size: 12px;
-    color: #969696;
+    color: #0a000e;
   }
 </style>

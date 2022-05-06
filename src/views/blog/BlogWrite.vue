@@ -1,5 +1,5 @@
 <template>
-  <div id="write" v-title :data-title="title">
+  <div id="write" v-title :data-title="title" style="background-color: #8c939d;">
     <el-container>
       <base-header :simple=true>
         <el-col :span="4" :offset="3">
@@ -13,7 +13,7 @@
         </el-col>
       </base-header>
 
-      <el-container class="me-area me-write-box">
+      <el-container class="me-area me-write-box" >
         <el-main class="me-write-main">
           <div class="me-write-title">
             <el-input resize="none"
@@ -61,6 +61,8 @@
         </div>
       </el-dialog>
     </el-container>
+    <h1 style="margin-left: 700px">认真写好每一篇文章</h1>
+
   </div>
 </template>
 
@@ -323,7 +325,7 @@
   }
 
   .me-write-box {
-    max-width: 700px;
+    max-width: 1000px;
     margin: 80px auto 0;
   }
 
