@@ -5,7 +5,7 @@
       <a @click="view(id)" class="me-article-title">{{title}}</a>
       <el-button v-if="weight > 0" class="me-article-icon" type="text" style="color: red">置顶</el-button>
       <span class="me-pull-right me-article-count" style="color: #0324fb">
-	    	<i class="me-icon-comment"></i>&nbsp;{{commentCounts}}
+	    	<i class="el-icon-message"></i>&nbsp;{{commentCounts}}
 	    </span>
       <span class="me-pull-right me-article-count" style="color: #0324fb">
 	    	<i class="el-icon-view"></i>&nbsp;{{viewCounts}}

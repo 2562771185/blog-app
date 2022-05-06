@@ -64,8 +64,8 @@
             <div class="me-view-comment-write">
               <el-row :gutter="20">
                 <el-col :span="2">
-                  <a class="">
-                    <img class="me-view-picture" :src="avatar"></img>
+                  <a class="" style="margin-left: 40px;">
+                    <img class="me-view-picture" :src="avatar" style="margin-top: 10px"></img>
                   </a>
                 </el-col>
                 <el-col :span="22">
@@ -99,7 +99,7 @@
               :rootCommentCounts="comments.length"
               @commentCountsIncrement="commentCountsIncrement"
               :key="c.id"
-            style="background-color: #7b6e6e;opacity: 0.7;">
+            style="background-color: rgba(187,189,187,0.4);opacity: 0.7;">
             </commment-item>
 
           </div>
@@ -247,11 +247,11 @@
 
 <style>
   .me-view-body {
-    margin: 100px auto 140px;
+    margin: 100px auto ;
   }
 
   .me-view-container {
-    width: 800px;
+    width: 1200px;
   }
 
   .el-main {

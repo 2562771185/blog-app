@@ -1,25 +1,23 @@
 <template>
   <div class="me-view-comment-item">
     <div class="me-view-comment-author">
-      <a class="">
+      <a class="" style="margin-left: 10px">
         <img class="me-view-picture" :src="comment.author.avatar"></img>
       </a>
-      <div class="me-view-info">
+      <div class="me-view-info" style="margin-left: 10px">
         <span class="me-view-nickname">{{comment.author.nickname}}</span>
         <div class="me-view-meta">
-          <span style="color: #00d1b2">{{rootCommentCounts - index}}楼</span>
+          <span style="color: #c504fe">{{rootCommentCounts - index}}楼</span>
           <span>{{comment.createDate | format}}</span>
         </div>
       </div>
     </div>
-    <div>
+    <div style="margin-left: 10px">
       <p class="me-view-comment-content">{{comment.content}}</p>
       <div class="me-view-comment-tools">
-        <!--<a class="me-view-comment-tool">-->
-        <!--<i class="el-icon-caret-top"></i> 20-->
-        <!--</a>-->
+
         <a class="me-view-comment-tool" @click="showComment(-1,comment.author)">
-          <i class="me-icon-comment"></i>&nbsp; <span style="color:#edf109;">评论</span>
+          <i class="me-icon-comment"></i>&nbsp; <span style="color:#edf109;">回复评论</span>
         </a>
       </div>
 

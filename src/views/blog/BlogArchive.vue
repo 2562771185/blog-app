@@ -2,7 +2,7 @@
   <div v-title :data-title="title">
     <el-container>
 
-      <el-aside class="me-area">
+      <el-aside class="me-area" style="background-color: rgba(189,180,148,0.76);border-radius: 10px">
         <ul class="me-month-list">
           <li v-for="a in archives" :key="a.year + a.month" class="me-month-item">
             <el-badge :value="a.count">
@@ -16,7 +16,7 @@
 
 
       <el-main class="me-articles">
-        <div class="me-month-title">{{currentArchive}}</div>
+        <div class="me-month-title" style="color: #d6d6d4">{{currentArchive}}</div>
 
         <article-scroll-page v-bind="article"></article-scroll-page>
 

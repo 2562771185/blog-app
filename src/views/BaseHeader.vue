@@ -11,7 +11,7 @@
         </router-link>
       </el-col>
 
-      <el-col v-if="!simple" :span="14" :offset="3">
+      <el-col v-if="!simple" :span="8" :offset="3">
         <el-menu :router=true menu-trigger="click" active-text-color="#467b47" :default-active="activeIndex"
                  mode="horizontal" background-color="#bdb494" text-color="black" >
           <el-menu-item index="/" style="font-size: larger"> 首页</el-menu-item>
@@ -22,22 +22,7 @@
           <el-col :span="4" :offset="0" >
             <el-menu-item index="/write" style="font-size: larger;"><i class="el-icon-edit" ></i>写文章</el-menu-item>
           </el-col>
-          <el-col :span="10">
-            <el-menu mode="horizontal" active-text-color="#5FB878" background-color="#bdb494" text-color="black">
-              <el-menu-item>
-                <template>
-                  <el-autocomplete
-                    v-model="search"
-                    :fetch-suggestions="querySearchAsync"
-                    placeholder="请输入查找内容"
-                    @select="handleSelect"
-                  >
 
-                  </el-autocomplete>
-                </template>
-              </el-menu-item>
-            </el-menu>
-          </el-col>
         </el-menu>
 
       </el-col>
@@ -47,6 +32,21 @@
         <slot></slot>
       </template>
 
+      <el-col :span="6">
+        <el-menu mode="horizontal" active-text-color="#5FB878" background-color="#bdb494" text-color="black">
+          <el-menu-item>
+            <template>
+              <el-autocomplete
+                v-model="search"
+                :fetch-suggestions="querySearchAsync"
+                placeholder="请输入查找内容"
+                @select="handleSelect"
+              >
+              </el-autocomplete>
+            </template>
+          </el-menu-item>
+        </el-menu>
+      </el-col>
       <el-col :span="4" >
         <el-menu :router=true menu-trigger="click" mode="horizontal" background-color="#bdb494">
           <template v-if="!user.login">

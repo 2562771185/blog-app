@@ -2,10 +2,10 @@
   <div class="me-ct-body" v-title :data-title="title">
     <el-container class="me-ct-container">
       <el-main>
-        <div class="me-ct-title me-area">
+        <div class="me-ct-title me-area" style="background-image: url('http://razk1ycbm.hn-bkt.clouddn.com/zouma/pexels-magda-ehlers-1279813.jpg');background-size: cover">
           <template v-if="this.$route.params.type === 'tag'">
             <img class="me-ct-picture" :src="ct.avatar?ct.avatar:defaultAvatar"/>
-            <h3 class="me-ct-name">{{ct.tagName}}</h3>
+            <h2 class="me-ct-name" style="color: #0a000e">{{ct.tagName}}</h2>
           </template>
 
           <template v-else>
@@ -149,7 +149,7 @@
 
   .me-ct-meta {
     font-size: 12px;
-    color: #969696;
+    color: #0a000e;
   }
 
   .me-ct-articles {
