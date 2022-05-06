@@ -57,5 +57,6 @@ export default {
   height:auto;
   background-size:cover;
   background-image: url("http://razk1ycbm.hn-bkt.clouddn.com/zouma/3.jpg");
+  background-attachment:fixed;
 }
 </style>

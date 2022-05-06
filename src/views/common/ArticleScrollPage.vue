@@ -61,7 +61,7 @@
         loading: false,
         noData: false,
         innerPage: {
-          pageSize: 5,
+          pageSize: 7,
           pageNumber: 1,
           name: 'a.createDate',
           sort: 'desc'
